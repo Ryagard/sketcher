@@ -22,16 +22,12 @@ function drawGrid(res){
 }
 drawGrid(resolution);
 
-
 function rebuildGrid(res){
-
     while(grid.lastElementChild)
     {
         grid.removeChild(grid.lastElementChild);
     }
-    
     let resolution = res;
-
     drawGrid(res);
 }
 

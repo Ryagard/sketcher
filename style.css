@@ -1,11 +1,38 @@
 body{
     font-family: 'Nunito', sans-serif;
+    background-color: white;
     margin: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
+
+button{
+    color: #f8b332;
+    background-color: white;
+    font-size: medium;
+    padding: 12px 24px;
+    border: 2px solid;
+    border-radius: 6px;
+    border-width: 1px 1px 1px;
+    box-shadow: 5px 5px 0px;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.2ms;
+    margin-top: 30px;
+}
+
+button:hover{
+    background-color: white;
+}
+
+button:active{
+    border-radius: 8px;
+    border-width: 1px 1px 1px 1px;
+    box-shadow: 2px 2px 1px 1px;
+}
+
 
 .wrapper{
     display: flex;
@@ -19,8 +46,19 @@ body{
 .footer{
     display: flex;
     text-align: center;
+    width: 100%;
     flex-direction: column;
-    padding: 15px;
+    padding: 15px 0px;
+}
+
+.header{
+    background-color: #f8b332;
+    border-bottom: 2px solid black;
+}
+
+.footer{
+    background-color: #f8b332;
+    border-top: 2px solid black;
 }
 
 .main{
@@ -32,9 +70,25 @@ body{
 
 .options{
     display: flex;
+    color: #f8b332;
+    padding: 30px;
+    border: 80px solid;
+    border-radius: 12px;
+    border-width: 12px;
+
+}
+
+.resolution,
+.slider,
+.resValue{
+    color: black;
 }
 
 .sketcher{
+    color: #f8b332;
+    border: 12px solid;
+    border-radius: 8px;
+    border-width: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,9 +109,10 @@ body{
 
 .cell{
     background-color: white;
+
 }
 
 .cell:hover{
-    background-color: rgba(0, 0, 0, 0.125);
+    background-color: rgba(245, 245, 245, 0.25);
     transform: scale(1.05);
 }
