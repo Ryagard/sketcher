@@ -17,8 +17,9 @@
                 <div class="options">
                     <div class="resolution">
                         <div>Resolution</div>
-                        <input type="range" oninput="changeRes(this.value)" min="1" max="32" value="16" class="slider">
+                        <input type="range" oninput="rebuildGrid(this.value)" min="1" max="64" value="16" class="slider">
                         <div class="resValue">...</div>
+                        <button onclick="clearGrid()">clear</button>
                     </div>
                 </div>
                 <div class="sketcher">

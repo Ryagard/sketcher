@@ -45,16 +45,19 @@ body{
 }
 
 .grid-container{
+    outline: grey solid 2px;
     display: grid;
+    gap: 0.5px;
+    background-color: rgba(30, 30, 30, 0.8);
     width: inherit;
     height: inherit;
 }
 
 .cell{
-    color: white;
+    background-color: white;
 }
 
 .cell:hover{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.125);
     transform: scale(1.05);
 }

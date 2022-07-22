@@ -3,6 +3,10 @@ const grid = document.querySelector('.grid-container');
 const options = document.querySelector('.options');
 const resValue = document.querySelector('.resValue');
 
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
 function drawGrid(res){
     grid.style.gridTemplateColumns = `repeat(${res}, 1fr)`;
     grid.style.gridTemplateRow = `repeat(${res}, 1fr)`;
@@ -10,7 +14,8 @@ function drawGrid(res){
     for (let i = 0; i < (res * res); i++) {
         const cell = document.createElement('div');
         cell.className = 'cell';
-        cell.addEventListener("mouseover", drawCell);
+        cell.addEventListener('click', drawCell);
+        cell.addEventListener('mouseenter', drawCell);        
         grid.appendChild(cell);
     }
     resValue.innerText = `${res} x ${res}`;
@@ -18,7 +23,7 @@ function drawGrid(res){
 drawGrid(resolution);
 
 
-function changeRes(res){
+function rebuildGrid(res){
 
     while(grid.lastElementChild)
     {
@@ -31,5 +36,12 @@ function changeRes(res){
 }
 
 function drawCell(e){
-    e.target.style.backgroundColor = "black";
+    if(e.type === 'click' || mouseDown === true){
+        e.target.style.backgroundColor = 'black';
+    }
+}
+
+function clearGrid(){
+    let size = document.querySelector('.slider');
+    rebuildGrid(size.value);
 }
