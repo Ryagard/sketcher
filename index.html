@@ -14,8 +14,15 @@
     <div class="wrapper">
         <div class="header">Header</div>
             <div class="main">
+                <div class="options">
+                    <div class="resolution">
+                        <div>Resolution</div>
+                        <input type="range" oninput="changeRes(this.value)" min="1" max="32" value="16" class="slider">
+                        <div class="resValue">...</div>
+                    </div>
+                </div>
                 <div class="sketcher">
-                    <div class="grid"></div>
+                    <div class="grid-container"></div>
                 </div>
             </div>
         <div class="footer">Footer</div>

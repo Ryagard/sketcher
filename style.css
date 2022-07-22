@@ -11,7 +11,7 @@ body{
     display: flex;
     flex: 1;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
 }
 
 .header,
@@ -25,24 +25,36 @@ body{
 
 .main{
     flex: 1;
-    align-content: center;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.options{
+    display: flex;
 }
 
 .sketcher{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 384px;
+    height: 384px;
 }
 
-.grid{
+.grid-container{
     display: grid;
-    gap: 8px;
+    width: inherit;
+    height: inherit;
 }
 
 .cell{
-    width: 16px;
-    height: 16px;
-    background-color: blue;
+    color: white;
+}
+
+.cell:hover{
+    background-color: black;
+    transform: scale(1.05);
 }
